@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Oli Pratt'
-SITENAME = 'Oli Pratt'
-SITEURL = ''
+SITENAME = AUTHOR
+SITEURL = 'http://localhost:8000'
 
 PATH = 'content'
 
@@ -23,7 +23,8 @@ AUTHOR_FEED_RSS = None
 LINKS = (('Metaswitch', 'https://www.metaswitch.com/'),)
 
 # Social widget
-SOCIAL = (('github', 'https://github.com/olipratt'),)
+SOCIAL = (('github', 'https://github.com/olipratt'),
+          ('rss', '/feeds/all.atom.xml'),)
 
 DEFAULT_PAGINATION = False
 
@@ -32,11 +33,11 @@ DEFAULT_PAGINATION = False
 
 THEME = "../pelican-themes/Flex"
 
-SITETITLE = 'Oli Pratt'
+SITETITLE = AUTHOR
 SITESUBTITLE = 'Sotfware Engineer'
 SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
-SITELOGO = 'static/images/site_logo.png'
-FAVICON = SITEURL + 'static/images/favicon.ico'
+SITELOGO = '/static/images/site_logo.png'
+FAVICON = '/static/images/favicon.ico'
 
 MAIN_MENU = True
 MENUITEMS = (('Archives', '/archives.html'),
