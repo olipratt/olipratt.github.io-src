@@ -29,7 +29,7 @@ SOCIAL = (('github', 'https://github.com/olipratt'),
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
 
 THEME = "../pelican-themes/Flex"
 
@@ -47,6 +47,7 @@ MENUITEMS = (('Archives', '/archives.html'),
 PYGMENTS_STYLE = 'monokai'
 STATIC_PATHS = ['static']
 
+# Don't add authors page or author directory - there's only ever one author.
 AUTHORS_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
 
