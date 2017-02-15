@@ -49,3 +49,7 @@ STATIC_PATHS = ['static']
 
 AUTHORS_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
+
+# Delete output directory when building, but retain git data.
+DELETE_OUTPUT_DIRECTORY = True
+OUTPUT_RETENTION = ['.git']
