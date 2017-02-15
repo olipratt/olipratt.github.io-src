@@ -34,7 +34,7 @@ DEFAULT_PAGINATION = False
 THEME = "../pelican-themes/Flex"
 
 SITETITLE = AUTHOR
-SITESUBTITLE = 'Sotfware Engineer'
+SITESUBTITLE = 'Software Engineer'
 SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
 SITELOGO = '/static/images/site_logo.png'
 FAVICON = '/static/images/favicon.ico'
@@ -47,3 +47,5 @@ MENUITEMS = (('Archives', '/archives.html'),
 PYGMENTS_STYLE = 'monokai'
 STATIC_PATHS = ['static']
 
+AUTHORS_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
