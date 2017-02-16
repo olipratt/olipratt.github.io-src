@@ -51,9 +51,9 @@ STATIC_PATHS = ['static']
 AUTHORS_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
 
-# Delete output directory when building, but retain git data.
+# Delete output directory when building, but retain git and CNAME data.
 DELETE_OUTPUT_DIRECTORY = True
-OUTPUT_RETENTION = ['.git']
+OUTPUT_RETENTION = ['.git', 'CNAME']
 
 # Replacements for strings with special characters that can't appear in slugs.
 SLUG_SUBSTITUTIONS = (('C++', 'cpp'),)
