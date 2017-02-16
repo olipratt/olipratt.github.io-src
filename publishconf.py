@@ -18,5 +18,5 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = ""
+DISQUS_SITENAME = "olipratt"
 #GOOGLE_ANALYTICS = ""
