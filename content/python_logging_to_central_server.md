@@ -5,7 +5,7 @@ Tags: Python, logging, syslog
 
 After looking into [microservices]({filename}/rest_swagger_producer.md) [recently]({filename}/rest_swagger_consumer.md), I was running multiple terminals and switching between them to look at logs as they are written to screen. This was a little awkward so I thought it was worth looking for the right way to log to a central location from multiple microservices. Ideally I wanted do this just using the Python logging library, and without adding more dependencies to every service.
 
-This meant a lot of reading around to reach a rather boring and obvious solution. I documented my whistle-stop tour around the world of logging, but jump to the end to just see the [solution](#solution) I went with.
+This meant a lot of reading around to reach a rather boring and obvious solution. I documented my whistle-stop tour around the world of logging, but jump to the end to just see the [solution](#real-solution) I went with.
 
 ## Picking a format
 
@@ -133,7 +133,7 @@ def configure_logging(client_name, host=None, level=logging.INFO):
 So this now works fine, it's a reasonable chunk of code, but it's mostly just boilerplate stuff setting up the built in logging module, and the only custom part is setting up the right formatter. All done?
 
 
-## <a name="solution"></a>Real Solution
+## Real Solution
 
 So after all that, I think I'm done and move on to something else - containerising these apps was up next for me - ...and that's when I stumble across the *right* answer. It's right [here](https://12factor.net/logs) in these [guidelines to writing services](https://12factor.net/):
 

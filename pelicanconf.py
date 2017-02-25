@@ -2,14 +2,18 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+import pelican
+
 AUTHOR = 'Oli Pratt'
 SITENAME = AUTHOR
 SITEURL = 'http://localhost:8000'
 
 PATH = 'content'
 
+# Localisation settings.
 TIMEZONE = 'Europe/London'
-
+# Open Graph locale.
+OG_LOCALE = 'en_GB'
 DEFAULT_LANG = 'English'
 
 # Feed generation is usually not desired when developing
@@ -57,3 +61,31 @@ OUTPUT_RETENTION = ['.git', 'CNAME']
 
 # Replacements for strings with special characters that can't appear in slugs.
 SLUG_SUBSTITUTIONS = (('C++', 'cpp'),)
+
+# Enable selected plugins.
+PLUGIN_PATHS = ['../pelican-plugins/']
+PLUGINS = ['sitemap', 'post_stats']
+
+# Sitemap config.
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.6,
+        'indexes': 0.6,
+        'pages': 0.5,
+    },
+    'changefreqs': {
+        'articles': 'weekly',
+        'indexes': 'daily',
+        'pages': 'monthly',
+    }
+}
+
+# Don't list tags against articles on the homepage.
+HOME_HIDE_TAGS = True
+
+# Add the TOC Markdown extenstion so headings have links added automatically.
+# Needs all other default settings added or they are lost, so import those
+# from the Pelican default config dict and then update it.
+MARKDOWN = pelican.settings.DEFAULT_CONFIG['MARKDOWN']
+MARKDOWN['extension_configs'].update({'markdown.extensions.toc': {}})
