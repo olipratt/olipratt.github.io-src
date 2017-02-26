@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://olipratt.co.uk/sitemap.xml

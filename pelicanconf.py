@@ -41,7 +41,7 @@ SITETITLE = AUTHOR
 SITESUBTITLE = 'Software Engineer'
 SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
 SITELOGO = '/static/images/site_logo.png'
-FAVICON = '/static/images/favicon.ico'
+FAVICON = '/favicon.ico'
 
 MAIN_MENU = True
 MENUITEMS = (('Archives', '/archives.html'),
@@ -49,7 +49,13 @@ MENUITEMS = (('Archives', '/archives.html'),
              ('Tags', '/tags.html'),)
 
 PYGMENTS_STYLE = 'monokai'
+
+# Static files config.
 STATIC_PATHS = ['static']
+EXTRA_PATH_METADATA = {
+    'static/robots.txt': {'path': 'robots.txt'},
+    'static/images/favicon.ico': {'path': 'favicon.ico'}
+}
 
 # Don't add authors page or author directory - there's only ever one author.
 AUTHORS_SAVE_AS = ''
@@ -80,6 +86,8 @@ SITEMAP = {
         'pages': 'monthly',
     }
 }
+
+ROBOTS = 'index, follow'
 
 # Don't list tags against articles on the homepage.
 HOME_HIDE_TAGS = True
