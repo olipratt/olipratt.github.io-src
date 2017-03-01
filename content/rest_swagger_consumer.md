@@ -1,7 +1,7 @@
 Title: Python REST API Client Adhering to a Swagger Schema
 Date: 2017-02-11 19:13
 Category: REST
-Tags: Python, REST, Swagger, pyswagger
+Tags: Python, REST, Swagger, pyswagger, microservice
 
 
 After [building a REST API]({filename}/rest_swagger_producer.md) I left it alone for a while before coming back to try and get a client working properly.

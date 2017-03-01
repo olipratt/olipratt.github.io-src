@@ -1,7 +1,7 @@
 Title: Python REST API With SwaggerUI
 Date: 2016-10-29 11:45
 Category: REST
-Tags: Python, REST, Swagger, Flask-RESTPlus
+Tags: Python, REST, Swagger, Flask-RESTPlus, microservice
 
 
 What with REST APIs and the [swagger](http://swagger.io/) framework for documenting and integrating them being the in-thing lately, to start getting to grips with them I wanted to see how easy it would be to create a simple one in Python with minimal code from me. Turns out it was very simple.

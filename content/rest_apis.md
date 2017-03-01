@@ -33,4 +33,6 @@ After working to create a [REST API]({filename}/rest_swagger_producer.md) and [c
 
 * [Talk on the discoverability side of REST](https://vimeo.com/20781278)
 
+---
+
 Have you got any other good general rules, notes, or references to add?

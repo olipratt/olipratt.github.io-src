@@ -1,7 +1,7 @@
 Title: Python Microservice Logging
 Date: 2017-02-25 14:39
 Category: Logging
-Tags: Python, logging, syslog
+Tags: Python, logging, syslog, microservice
 
 After looking into [microservices]({filename}/rest_swagger_producer.md) [recently]({filename}/rest_swagger_consumer.md), I was running multiple terminals and switching between them to look at logs as they are written to screen. This was a little awkward so I thought it was worth looking for the right way to log to a central location from multiple microservices. Ideally I wanted do this just using the Python logging library, and without adding more dependencies to every service.
 
@@ -23,7 +23,7 @@ Going back to the logging module, it looked like basic [HTTPHandler](https://doc
 
 I got that working, but the POST body from the HTTPHandler was not JSON but just a [URL encoded string](http://stackoverflow.com/a/14551320). I could easily decode this in a Flask server, but then it was still a lot of code to copy paste and I might as well just shove in a JSON body instead. So I reworked that into a REST log handler - which I still have lying around:
 
-```python
+```python3
 def configure_remote_logging(url, client_name, level=logging.INFO):
     """Set up remote logging to the specified url.
 
@@ -70,7 +70,7 @@ def configure_remote_logging(url, client_name, level=logging.INFO):
 
 Then receiving the log is simple on the Flask server side - just:
 
-```python
+```python3
 class LogsCollection(Resource):
     def post(self):
         """Receives a log."""
@@ -140,6 +140,8 @@ So after all that, I think I'm done and move on to something else - containerisi
 ***Just write your logs to stdout.***
 
 That's it! Then whatever is running your app pipes them out and handles them appropriately. Anything else you do is just another system someone has to worry about integrating into their setup. [Docker by default assumes an app will send logs to stdout](https://docs.docker.com/engine/reference/commandline/logs/#/extended-description) and handles them as configured. I saw this in action when I started using Docker - I'll write that up soon.
+
+---
 
 So that was an interesting bit of investigation, and I learnt some stuff, but damn if it doesn't feel like a waste of time.
 
