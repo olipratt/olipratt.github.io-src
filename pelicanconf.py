@@ -48,7 +48,11 @@ MENUITEMS = (('Archives', '/archives.html'),
              ('Categories', '/categories.html'),
              ('Tags', '/tags.html'),)
 
+# Use monokai for code snippets, and set a CSS file which sets any unstyled
+# text in a code block to match plain text - otherwise it's black and
+# unreadable.
 PYGMENTS_STYLE = 'monokai'
+CUSTOM_CSS = 'static/custom.css'
 
 # Static files config.
 STATIC_PATHS = ['static']
