@@ -4,56 +4,52 @@ from __future__ import unicode_literals
 
 import pelican
 
+
+# - High level site settings.
+# High level strings.
 AUTHOR = 'Oli Pratt'
 SITENAME = AUTHOR
+SITETITLE = AUTHOR
+SITESUBTITLE = 'Software Engineer'
+SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
 
-# Use document-relative URLs when developing.
-SITEURL = 'http://localhost:8000'
-RELATIVE_URLS = True
+# How many posts per-page on the index pages.
+DEFAULT_PAGINATION = False
 
-PATH = 'content'
+# Don't add authors page or author directory - there's only ever one author.
+AUTHORS_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
+# These feeds aren't wanted at all for this site.
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
 
-# Localisation settings.
+# Replacements for strings with special characters that can't appear in slugs.
+SLUG_SUBSTITUTIONS = (('C++', 'cpp'),)
+
+# Default values for 'robots' meta tag.
+ROBOTS = 'index, follow'
+
+
+# - Localisation settings.
 TIMEZONE = 'Europe/London'
 # Open Graph locale.
 OG_LOCALE = 'en_GB'
 DEFAULT_LANG = 'English'
 
-# Feed generation is usually not desired when developing
+
+# - These options are overridden when publishing.
+# Use document-relative URLs when developing
+SITEURL = 'http://localhost:8000'
+RELATIVE_URLS = True
+# Feed generation is usually not desired when developing.
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Metaswitch', 'https://www.metaswitch.com/'),)
 
-# Social widget
-SOCIAL = (('github', 'https://github.com/olipratt'),
-          ('rss', '/feeds/all.atom.xml'),)
-
-DEFAULT_PAGINATION = False
-
-THEME = "../pelican-themes/Flex"
-BROWSER_COLOR = '#282828'
-
-SITETITLE = AUTHOR
-SITESUBTITLE = 'Software Engineer'
-SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
-SITELOGO = '/static/images/site_logo.png'
-FAVICON = '/favicon.ico'
-
-MAIN_MENU = True
-MENUITEMS = (('Archives', '/archives.html'),
-             ('Categories', '/categories.html'),
-             ('Tags', '/tags.html'),)
-
-# Use monokai for code snippets, and set a CSS file which sets any unstyled
-# text in a code block to match plain text - otherwise it's black and
-# unreadable.
-PYGMENTS_STYLE = 'monokai'
-CUSTOM_CSS = 'static/custom.css'
+# - File/directory related settings.
+# Location of all user content.
+PATH = 'content'
 
 # Static files config.
 STATIC_PATHS = ['static']
@@ -63,17 +59,31 @@ EXTRA_PATH_METADATA = {
     'static/CNAME': {'path': 'CNAME'},
 }
 
-# Don't add authors page or author directory - there's only ever one author.
-AUTHORS_SAVE_AS = ''
-AUTHOR_SAVE_AS = ''
+# Static image paths.
+SITELOGO = '/static/images/site_logo.png'
+FAVICON = '/favicon.ico'
 
 # Delete output directory when building, but retain git data.
 DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_RETENTION = ['.git']
 
-# Replacements for strings with special characters that can't appear in slugs.
-SLUG_SUBSTITUTIONS = (('C++', 'cpp'),)
 
+# - Links config.
+# Blogroll
+LINKS = (('Metaswitch', 'https://www.metaswitch.com/'),)
+
+# Social widget
+SOCIAL = (('github', 'https://github.com/olipratt'),
+          ('rss', '/feeds/all.atom.xml'),)
+
+# Main menu settings.
+MAIN_MENU = True
+MENUITEMS = (('Archives', '/archives.html'),
+             ('Categories', '/categories.html'),
+             ('Tags', '/tags.html'),)
+
+
+# - Plugin configuration.
 # Enable selected plugins.
 PLUGIN_PATHS = ['../pelican-plugins/']
 PLUGINS = ['sitemap', 'post_stats', 'representative_image']
@@ -93,13 +103,24 @@ SITEMAP = {
     }
 }
 
-ROBOTS = 'index, follow'
 
-# Don't list tags against articles on the homepage.
-HOME_HIDE_TAGS = True
-
+# - Markdown configuration.
 # Add the TOC Markdown extenstion so headings have links added automatically.
 # Needs all other default settings added or they are lost, so import those
 # from the Pelican default config dict and then update it.
 MARKDOWN = pelican.settings.DEFAULT_CONFIG['MARKDOWN']
 MARKDOWN['extension_configs'].update({'markdown.extensions.toc': {}})
+
+
+# - Theme specific options.
+# Use the Flex theme.
+THEME = "../pelican-themes/Flex"
+# Colour of mobile browsers viewing the site.
+BROWSER_COLOR = '#282828'
+# Don't list tags against articles on the homepage.
+HOME_HIDE_TAGS = True
+# Use monokai for code snippets, and set a CSS file which sets any unstyled
+# text in a code block to match plain text - otherwise it's black and
+# unreadable.
+PYGMENTS_STYLE = 'monokai'
+CUSTOM_CSS = 'static/custom.css'
