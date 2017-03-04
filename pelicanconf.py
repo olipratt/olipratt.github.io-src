@@ -6,7 +6,10 @@ import pelican
 
 AUTHOR = 'Oli Pratt'
 SITENAME = AUTHOR
+
+# Use document-relative URLs when developing.
 SITEURL = 'http://localhost:8000'
+RELATIVE_URLS = True
 
 PATH = 'content'
 
@@ -31,9 +34,6 @@ SOCIAL = (('github', 'https://github.com/olipratt'),
           ('rss', '/feeds/all.atom.xml'),)
 
 DEFAULT_PAGINATION = False
-
-# Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
 
 THEME = "../pelican-themes/Flex"
 
@@ -74,7 +74,7 @@ SLUG_SUBSTITUTIONS = (('C++', 'cpp'),)
 
 # Enable selected plugins.
 PLUGIN_PATHS = ['../pelican-plugins/']
-PLUGINS = ['sitemap', 'post_stats']
+PLUGINS = ['sitemap', 'post_stats', 'representative_image']
 
 # Sitemap config.
 SITEMAP = {

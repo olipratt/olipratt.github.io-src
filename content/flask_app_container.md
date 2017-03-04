@@ -2,6 +2,7 @@ Title: Docker Container for a simple Flask App
 Date: 2017-03-01 21:36
 Category: Containers
 Tags: Python, Flask, Container, Docker, microservice
+Image: /static/images/docker_small_h.png
 
 
 Continuing the recent microservices trend, I tried to containerise a previous project, a small REST datastore - [microstore]({filename}/rest_swagger_producer.md).
