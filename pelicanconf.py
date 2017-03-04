@@ -59,16 +59,17 @@ CUSTOM_CSS = 'static/custom.css'
 STATIC_PATHS = ['static']
 EXTRA_PATH_METADATA = {
     'static/robots.txt': {'path': 'robots.txt'},
-    'static/images/favicon.ico': {'path': 'favicon.ico'}
+    'static/images/favicon.ico': {'path': 'favicon.ico'},
+    'static/CNAME': {'path': 'CNAME'},
 }
 
 # Don't add authors page or author directory - there's only ever one author.
 AUTHORS_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
 
-# Delete output directory when building, but retain git and CNAME data.
+# Delete output directory when building, but retain git data.
 DELETE_OUTPUT_DIRECTORY = True
-OUTPUT_RETENTION = ['.git', 'CNAME']
+OUTPUT_RETENTION = ['.git']
 
 # Replacements for strings with special characters that can't appear in slugs.
 SLUG_SUBSTITUTIONS = (('C++', 'cpp'),)
