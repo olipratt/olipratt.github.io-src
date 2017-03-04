@@ -36,6 +36,7 @@ SOCIAL = (('github', 'https://github.com/olipratt'),
 DEFAULT_PAGINATION = False
 
 THEME = "../pelican-themes/Flex"
+BROWSER_COLOR = '#282828'
 
 SITETITLE = AUTHOR
 SITESUBTITLE = 'Software Engineer'
