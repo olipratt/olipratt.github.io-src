@@ -74,6 +74,7 @@ LINKS = (('Metaswitch', 'https://www.metaswitch.com/'),)
 
 # Social widget
 SOCIAL = (('github', 'https://github.com/olipratt'),
+          ('linkedin', 'https://www.linkedin.com/in/olipratt/'),
           ('rss', '/feeds/all.atom.xml'),)
 
 # Main menu settings.
