@@ -109,8 +109,11 @@ SITEMAP = {
 # Add the TOC Markdown extenstion so headings have links added automatically.
 # Needs all other default settings added or they are lost, so import those
 # from the Pelican default config dict and then update it.
+import pymdownx.emoji
 MARKDOWN = pelican.settings.DEFAULT_CONFIG['MARKDOWN']
-MARKDOWN['extension_configs'].update({'markdown.extensions.toc': {}})
+extensions = {'markdown.extensions.toc': {},
+              'pymdownx.emoji': {"emoji_generator": pymdownx.emoji.to_alt}}
+MARKDOWN['extension_configs'].update(extensions)
 
 
 # - Theme specific options.
