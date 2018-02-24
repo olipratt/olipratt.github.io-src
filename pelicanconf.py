@@ -17,8 +17,8 @@ SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
 # How many posts per-page on the index pages.
 DEFAULT_PAGINATION = 6
 
-# How long the summary should be. The default is fine.
-# SUMMARY_MAX_LENGTH = 50
+# How long the summary should be. The default is a little short.
+SUMMARY_MAX_LENGTH = 75
 
 # Don't add authors page or author directory - there's only ever one author.
 AUTHORS_SAVE_AS = ''
@@ -116,6 +116,7 @@ SITEMAP = {
 import pymdownx.emoji
 MARKDOWN = pelican.settings.DEFAULT_CONFIG['MARKDOWN']
 extensions = {'markdown.extensions.toc': {},
+              'markdown.extensions.smarty': {},
               'pymdownx.emoji': {"emoji_generator": pymdownx.emoji.to_alt}}
 MARKDOWN['extension_configs'].update(extensions)
 
