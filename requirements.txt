@@ -1,3 +1,4 @@
 pelican
 pymdown-extensions
 beautifulsoup4
+Markdown
