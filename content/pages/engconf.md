@@ -6,9 +6,11 @@ Hi! You should have been directed here from my Engineering Conference talk.
 Here's the information I promised - RESTitution for the puns! :smile:
 
 - [Slides](/giveitarestoli/presentation.html)
+    - [Slides Source Repo](https://github.com/olipratt/giveitarestoli)
 
 - [Write up on writing a server]({filename}/rest_swagger_producer.md)
     - [microstore - Swagger Server Repo](https://github.com/olipratt/microstore)
+
 - [Write up on writing a client]({filename}/rest_swagger_consumer.md)
     - [microcarddeck - Swagger Client Repo](https://github.com/olipratt/microcarddeck)
 
