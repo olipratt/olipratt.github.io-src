@@ -15,7 +15,10 @@ SITESUBTITLE = 'Software Engineer'
 SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
 
 # How many posts per-page on the index pages.
-DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = 6
+
+# How long the summary should be. The default is fine.
+# SUMMARY_MAX_LENGTH = 50
 
 # Don't add authors page or author directory - there's only ever one author.
 AUTHORS_SAVE_AS = ''
