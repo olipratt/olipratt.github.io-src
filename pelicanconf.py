@@ -69,7 +69,7 @@ FAVICON = '/favicon.ico'
 
 # Delete output directory when building, but retain git data.
 DELETE_OUTPUT_DIRECTORY = True
-OUTPUT_RETENTION = ['.git', '.gitmodules', 'giveitarestoli']
+OUTPUT_RETENTION = ['.git', '.gitmodules', '.gitignore', 'giveitarestoli']
 
 
 # - Links config.
