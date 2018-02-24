@@ -87,8 +87,8 @@ MENUITEMS = (('Archives', '/archives.html'),
 
 # - Plugin configuration.
 # Enable selected plugins.
-PLUGIN_PATHS = ['../pelican-plugins/']
-PLUGINS = ['sitemap', 'post_stats', 'representative_image']
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['sitemap', 'post_stats', 'representative_image', 'neighbors']
 
 # Sitemap config.
 SITEMAP = {
