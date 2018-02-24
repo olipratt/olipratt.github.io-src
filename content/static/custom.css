@@ -12,3 +12,9 @@ aside {
   background-color:#282828;
   background-size:16px 16px;
 }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
