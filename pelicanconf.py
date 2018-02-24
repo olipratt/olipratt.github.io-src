@@ -10,6 +10,7 @@ import pelican
 AUTHOR = 'Oli Pratt'
 SITENAME = AUTHOR
 SITETITLE = AUTHOR
+COPYRIGHT_NAME = AUTHOR
 SITESUBTITLE = 'Software Engineer'
 SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
 
@@ -118,7 +119,7 @@ MARKDOWN['extension_configs'].update(extensions)
 
 # - Theme specific options.
 # Use the Flex theme.
-THEME = "../pelican-themes/Flex"
+THEME = "Flex"
 # Colour of mobile browsers viewing the site.
 BROWSER_COLOR = '#282828'
 # Don't list tags against articles on the homepage.
