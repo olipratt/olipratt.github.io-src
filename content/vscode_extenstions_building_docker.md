@@ -4,7 +4,7 @@ Category: Editors
 Tags: VS Code, Docker
 Image: /static/images/vscode_banner.png
 
-#### TL;DR
+#### TL;DR:
 
 - [VS Code](https://code.visualstudio.com/) is an editor that allows you to [write](https://code.visualstudio.com/docs/extensions/example-hello-world) and [share](https://marketplace.visualstudio.com/) custom extensions.
 

@@ -1,4 +1,4 @@
-Title: About
+Title: About Me
 
 Hi, I'm Oliver Pratt, a Software Engineer living in London.
 
